@@ -1,5 +1,5 @@
-# React Component - 비제어 컴포넌트가 필요한 경우
+# React Component - props validator
 
 <pre>
-  많은 Input을 가지고 있는 form에 대한 Validation
+  
 </pre>

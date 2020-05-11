@@ -1,145 +1,35 @@
-## 내용 요약
+## 내용 요약 React
 <pre>
-[project-ex01]
-ES6 for React
+    1)기본 [project-ex07] 
+    1-1)개발 환경 설정(Webpack,Babel)
+    1-2)2가지 개념: 속성(property), 상태(state)
+    2)Virtual DOM: ReactDOM API
+    3)JSX
+    4)Component
+    4-1)Component Styling
+        (1)inline [project-ex08]
+        (2)hybrid[외부 css(SASS,LESS), Loader를 사용해서 전처리]
+        -css 번들링[project-ex9]
+        -css module[project-ex10]
+        -css processor(SASS,LESS)
+    
+    4-2)Working with Form(Controller & Uncontroller) [project-ex11]
+        제어 컴포넌트
+        1.컴포넌트 UI인터페이스 외부에서는 직접 값(속성)을 변경할 수 없다.
+        2.컴포넌트 UI인터페이스 외부에서는 직접 값(상태)을 변경할 수 있다.
+        3.외부에서 값(상태)을 변경할 수 있는 컴포넌트를 제어 컴포넌트라고 한다.
 
+        비제어 컴포넌트
+        1.외부에서 값(상태)을 변경할 수 없는 컴포넌트를 비제어 컴포넌트라고 한다.
+        2.비제어 컴포넌트도 사용처가 있다.[project-ex12]
+    4-3)속성 Validation [project-ex13]
+    4-4)상태(stateful)컴포넌트 vs Pure Component : 컴포넌트 작성/중첩
+    4-5)데이터 흐름& 컴포넌트 통신
+    4-6)Component 생명 주기 & Data Fetching(API 서버 사용)
+    4-7)
 
-=====================================
-[project-ex02]
-전통적인 DOM API 기반의 앱
-
-npm init -y project menifest package.json 생성
-
-=====================================
-[project-ex03]
-파일 나눠서 작성해 보기
-
-=====================================
-[project-ex04]
-ES6 모듈 지원 연습
-
-=====================================
-[project-ex05]
-ES6 모듈 지원 기반으로 작성해 보기
-
-=====================================
-[project-ex05]
-번들링
-
-1. 프로젝트 생성 
-    1-1. 프로젝트 디렉토리 생성
-    1-2. src, public 디렉토리 생성
-2.매니페스트(package.json) 초기화
-    npm init -y
-3.webpack 설치
-    $ npm i -D webpack webpack-cli webpack-dev-server
-    $ npx webpack -v
-4.webpack 설정(webpack.config.js)
-const path = require('path');
-
-module.exports = {
-    entry: path.resolve('src/index.js'),
-    output: {
-        path: path.resolve('public'),
-        filename: 'bundle.js'
-    },
-    devServer: {
-        contentBase: path.resolve('public'),
-        host: '0.0.0.0',
-        port: 9999,
-        inline: true,
-        liveReload: true,
-        hot: false,
-        compress: true,
-        historyApiFallback: true
-    }      
-}
-5.npm scripting
-"scripts": {
-    "build": "npx webpack",
-    "start": "npx webpack-dev-server"
-  }
-=====================================
-[project-ex06]
-1~5까지는 project-ex05
-
-6.React Refactoring
-    -- react 라이브러리 패키지 설치
-        $ npm -i -D react react-dom
-    -- index.js, App.js 코드 수정
-        
-7. 번들링
-    -- Babel 설치
-        $ npm i -D @babel/core babel-loader @babel/preset-env @babel/preset-react 
-    -- babel-loader 설정(webpack.config.js)
-    -- babel 설정(babel.config.json)
-
-===========================================
-[project-ex07] 컴포넌트 구현 & 컴포넌트 속성
-
-1. 프로젝트 생성 
-    1-1. 프로젝트 디렉토리 생성
-    1-2. src, public 디렉토리 생성
-
-2.매니페스트(package.json) 초기화
-    $ npm init -y
-
-3.패키지 설치 webpack 설치
-    $ npm i -D webpack webpack-cli webpack-dev-server react react-dom @babel/core babel-loader @babel/preset-env @babel/preset-react
-
-4.webpack 설정(webpack.config.js)
-const path = require('path');
-
-module.exports = {
-    entry: path.resolve('src/index.js'),
-    output: {
-        path: path.resolve('public'),
-        filename: 'bundle.js'
-    },
-    module:{
-        rules:[{
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader'
-
-        }]
-    },
-    devServer: {
-        contentBase: path.resolve('public'),
-        host: '0.0.0.0',
-        port: 9999,
-        inline: true,
-        liveReload: true,
-        hot: false,
-        compress: true,
-        historyApiFallback: true
-    }      
-}
-5. babel설정(babel.config.json)
-
-    {
-        "presets": [["@babel/env",{
-                    "targets": {
-                        "edge": "80",
-                        "firefox": "73",
-                        "chrome": "82",
-                        "opera": "69",
-                        "safari": "13"
-                    }
-                }],"@babel/preset-react"]
-    }
-
-
-6.npm scripting (package.json, scripts 섹션 수정)
-
-    "scripts": {
-        "build": "npx webpack",
-        "start": "npx webpack-dev-server"
-    }
-
-7.화면 디자인
-
-8.컴포넌트 작성 + 조합**
-
-9. 속성 + 상태 
+    5)Routing
+    6)Flux(Reactive Programming) : Redux(React.js) WebFlux(Spring) Nuxt(Vue.js)
+    7)Testing
+    8)Performance Tunning
 <pre>
