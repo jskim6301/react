@@ -2,6 +2,10 @@
 import React from 'react';
 import data from './data.json';
 import KanbanBoard from './KanbanBoard';
+
+
+import './App.css';
+
 export default class App extends React.Component{
     render(){
         return(
