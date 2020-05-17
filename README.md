@@ -26,7 +26,7 @@
     4-4)상태(stateful)컴포넌트 vs Pure Component : 컴포넌트 작성/중첩
     4-5)데이터 흐름& 컴포넌트 통신
     4-6)Component 생명 주기 & Data Fetching(API 서버 사용)
-    4-7)
+    4-7) Immutablity(불변성)
 
     5)Routing
     6)Flux(Reactive Programming) : Redux(React.js) WebFlux(Spring) Nuxt(Vue.js)
